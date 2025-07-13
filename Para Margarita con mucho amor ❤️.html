@@ -145,6 +145,21 @@
       50%  { transform: translateY(90vh) rotate(180deg); opacity: 0.7; }
       100% { transform: translateY(180vh) rotate(360deg); opacity: 0; }
     }
+
+    footer {
+      text-align: center;
+      margin: 120px 0 60px;
+      padding: 20px;
+      font-size: 1.2em;
+      color: #c2185b;
+      opacity: 0;
+      animation: florecer 6s ease-in-out forwards;
+      animation-delay: 3s;
+    }
+
+    @keyframes florecer {
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -179,9 +194,4 @@
     <div class="hearts">
       <div class="heart">❤️</div>
       <div class="big-heart">❤️</div>
-      <div class="heart">❤️</div>
-    </div>
-  </main>
-
-</body>
-</html>
+      <div class="heart">❤️</div></html>
