@@ -9,12 +9,10 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #fff8fc, #fce4ec);
-      background-image: url('fondo-rosas.jpg');
+      background-image: url('fondo-rosas.jpg'); /* usa tu imagen de margaritas aquí */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      overflow-y: auto;
       min-height: 100vh;
     }
 
@@ -89,19 +87,55 @@
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.3); }
     }
+
+    /* Abejas con movimiento libre */
+    .abeja {
+      position: fixed;
+      font-size: 2em;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .abeja-1 {
+      animation: vueloLibre1 20s infinite linear;
+    }
+
+    .abeja-2 {
+      animation: vueloLibre2 25s infinite linear;
+    }
+
+    @keyframes vueloLibre1 {
+      0%   { top: 10vh; left: 5vw; transform: rotate(0deg); }
+      20%  { top: 30vh; left: 20vw; transform: rotate(30deg); }
+      40%  { top: 50vh; left: 60vw; transform: rotate(-15deg); }
+      60%  { top: 70vh; left: 30vw; transform: rotate(20deg); }
+      80%  { top: 40vh; left: 80vw; transform: rotate(-10deg); }
+      100% { top: 10vh; left: 5vw; transform: rotate(0deg); }
+    }
+
+    @keyframes vueloLibre2 {
+      0%   { top: 80vh; left: 90vw; transform: rotate(0deg); }
+      25%  { top: 60vh; left: 70vw; transform: rotate(-20deg); }
+      50%  { top: 30vh; left: 50vw; transform: rotate(25deg); }
+      75%  { top: 50vh; left: 20vw; transform: rotate(-15deg); }
+      100% { top: 80vh; left: 90vw; transform: rotate(0deg); }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Abejas con vuelo libre -->
+  <span class="abeja abeja-1">🐝</span>
+  <span class="abeja abeja-2">🐝</span>
 
   <header>
     <div>¡Feliz cumpleaños #22, Margarita! 🎂🎉🥳🎊</div>
   </header>
 
   <main>
-    <h1>Estas son las mañanitas que cantaba el Rey David a las muchachas bonitas se las cantamos así🎶🥁🎊 </h1><br>
+    <h1>Estas son las mañanitas que cantaba el Rey David a las muchachas bonitas se las cantamos así 🎶🥁🎊</h1>
     <div class="subtitulo">¡Feliz Cumpleaños Margarita! 🎂</div>
     <p>
-   
       Eres única e inigualable, sin duda alguna.<br>
       Gracias por existir ✨💗, por iluminar mi vida con tu dulzura
       y por regalar alegría con tu presencia incomparable.<br><br>
@@ -110,7 +144,7 @@
       <strong>Hoy celebro a la mujer más maravillosa que eres</strong>, deseándote bendiciones infinitas, amor verdadero y un camino lleno de luz, paz y felicidad. ✨💖<br><br>
       <em>Ya queremos pastel 🎂 aunque sea un pedacito, pero queremos pastel 🎂</em><br>
       <em>Ya queremos pastel 🎂 aunque sea un pedacito, pero queremos pastel 🎂</em><br><br>
-      <em>Con mucho amor Kevin, siempre estare contigo ❤️</em>
+      <em>Con mucho amor Kevin, siempre estaré contigo ❤️</em>
     </p>
     <div class="hearts">
       <div class="heart">❤️</div>
