@@ -9,8 +9,17 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff8fc;
-      min-height: 100vh;
+      min-height: 200vh;
+      background: linear-gradient(to bottom, #ffe4ec, #ffc1da);
+      animation: fondoRomantico 20s infinite alternate ease-in-out;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    @keyframes fondoRomantico {
+      0%   { background: linear-gradient(to bottom, #ffe4ec, #ffc1da); }
+      50%  { background: linear-gradient(to bottom, #ffc1da, #ffb3c6); }
+      100% { background: linear-gradient(to bottom, #ffe4ec, #ffc1da); }
     }
 
     header {
@@ -30,6 +39,7 @@
       color: #d81b60;
       font-weight: bold;
       animation: bounce 1.8s infinite;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
 
     main {
@@ -37,15 +47,14 @@
       margin: 30px auto;
       padding: 30px;
       border-radius: 15px;
+      background-color: rgba(255, 246, 252, 0.93);
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
       position: relative;
       z-index: 10;
-      background-image: url('https://raw.githubusercontent.com/TheBestPrices/Regalo-Margarita/main/img/fondo-margaritas.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: rgba(255, 255, 255, 0.85);
-      background-blend-mode: lighten;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1, .subtitulo, p {
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
 
     h1 {
@@ -91,7 +100,7 @@
     }
 
     .abeja {
-      position: fixed;
+      position: absolute;
       font-size: 2em;
       pointer-events: none;
       z-index: 1000;
@@ -106,28 +115,48 @@
     }
 
     @keyframes vueloLibre1 {
-      0%   { top: 10vh; left: 5vw; transform: rotate(0deg); }
-      20%  { top: 30vh; left: 20vw; transform: rotate(30deg); }
-      40%  { top: 50vh; left: 60vw; transform: rotate(-15deg); }
-      60%  { top: 70vh; left: 30vw; transform: rotate(20deg); }
-      80%  { top: 40vh; left: 80vw; transform: rotate(-10deg); }
-      100% { top: 10vh; left: 5vw; transform: rotate(0deg); }
+      0%   { top: 5vh; left: 10vw; transform: rotate(0deg); }
+      20%  { top: 60vh; left: 25vw; transform: rotate(30deg); }
+      40%  { top: 120vh; left: 60vw; transform: rotate(-15deg); }
+      60%  { top: 180vh; left: 30vw; transform: rotate(20deg); }
+      80%  { top: 160vh; left: 80vw; transform: rotate(-10deg); }
+      100% { top: 5vh; left: 10vw; transform: rotate(0deg); }
     }
 
     @keyframes vueloLibre2 {
-      0%   { top: 80vh; left: 90vw; transform: rotate(0deg); }
-      25%  { top: 60vh; left: 70vw; transform: rotate(-20deg); }
-      50%  { top: 30vh; left: 50vw; transform: rotate(25deg); }
-      75%  { top: 50vh; left: 20vw; transform: rotate(-15deg); }
-      100% { top: 80vh; left: 90vw; transform: rotate(0deg); }
+      0%   { top: 200vh; left: 95vw; transform: rotate(0deg); }
+      25%  { top: 160vh; left: 70vw; transform: rotate(-20deg); }
+      50%  { top: 100vh; left: 50vw; transform: rotate(25deg); }
+      75%  { top: 140vh; left: 20vw; transform: rotate(-15deg); }
+      100% { top: 200vh; left: 95vw; transform: rotate(0deg); }
+    }
+
+    .petalo {
+      position: absolute;
+      top: -50px;
+      font-size: 1.5em;
+      animation: caerPetalo 16s infinite ease-in;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    @keyframes caerPetalo {
+      0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+      50%  { transform: translateY(90vh) rotate(180deg); opacity: 0.7; }
+      100% { transform: translateY(180vh) rotate(360deg); opacity: 0; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Abejas decorativas -->
+  <!-- 🐝 Abejas decorativas -->
   <span class="abeja abeja-1">🐝</span>
   <span class="abeja abeja-2">🐝</span>
+
+  <!-- 🌸 Pétalos románticos -->
+  <span class="petalo" style="left: 50vw;">🌸</span>
+  <span class="petalo" style="left: 20vw; animation-delay: 2s;">🌸</span>
+  <span class="petalo" style="left: 70vw; animation-delay: 4s;">🌸</span>
 
   <header>
     <div>¡Feliz cumpleaños #22, Margarita! 🎂🎉🥳🎊</div>
@@ -137,12 +166,12 @@
     <h1>Estas son las mañanitas que cantaba el Rey David a las muchachas bonitas se las cantamos así 🎶🥁🎊</h1>
     <div class="subtitulo">¡Feliz Cumpleaños Margarita! 🎂</div>
     <p>
-      Eres única e inigualable, sin duda alguna.<br>
+      <strong>Hoy celebro a la mujer más maravillosa que eres</strong>, deseándote bendiciones infinitas, amor verdadero y un camino lleno de luz, paz y felicidad. ✨💖<br>
+      <br>Eres <strong>única</strong> e <strong>inigualable</strong>, sin duda alguna.<br>
       Gracias por existir ✨💗, por iluminar mi vida con tu dulzura
       y por regalar alegría con tu presencia incomparable.<br><br>
       Que Dios <strong>te bendiga</strong>, <strong>te guarde</strong>, y conceda los deseos de tu corazón ❤️.<br><br>
-      <strong>No dejes de brillar</strong>, porque eres luz en medio de los que te rodean 🌟<br><br>
-      <strong>Hoy celebro a la mujer más maravillosa que eres</strong>, deseándote bendiciones infinitas, amor verdadero y un camino lleno de luz, paz y felicidad. ✨💖<br><br>
+      <strong>No dejes de brillar</strong>, porque eres <strong>luz</strong> en medio de los que te rodean 🌟<br><br>
       <em>Ya queremos pastel 🎂 aunque sea un pedacito, pero queremos pastel 🎂</em><br>
       <em>Ya queremos pastel 🎂 aunque sea un pedacito, pero queremos pastel 🎂</em><br><br>
       <em>Con mucho amor Kevin, siempre estaré contigo ❤️</em>
