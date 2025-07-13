@@ -50,7 +50,8 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
       position: relative;
       z-index: 10;
-      min-height: 550px;
+      min-height: 600px;
+      overflow: hidden;
     }
 
     h1, .subtitulo, p {
@@ -103,7 +104,7 @@
       position: absolute;
       font-size: 2em;
       pointer-events: none;
-      z-index: 999;
+      z-index: 20;
     }
 
     .abeja-1 {
@@ -115,26 +116,20 @@
     }
 
     @keyframes vueloLibre1 {
-      0%   { top: 5%; left: 10vw; transform: rotate(0deg); }
-      20%  { top: 40%; left: 25vw; transform: rotate(30deg); }
-      40%  { top: 80%; left: 60vw; transform: rotate(-15deg); }
-      60%  { top: 90%; left: 30vw; transform: rotate(20deg); }
-      80%  { top: 70%; left: 80vw; transform: rotate(-10deg); }
-      100% { top: 5%; left: 10vw; transform: rotate(0deg); }
+      0%   { top: 5%; left: 10%; transform: rotate(0deg); }
+      20%  { top: 40%; left: 25%; transform: rotate(30deg); }
+      40%  { top: 80%; left: 60%; transform: rotate(-15deg); }
+      60%  { top: 90%; left: 30%; transform: rotate(20deg); }
+      80%  { top: 70%; left: 80%; transform: rotate(-10deg); }
+      100% { top: 5%; left: 10%; transform: rotate(0deg); }
     }
 
     @keyframes vueloLibre2 {
-      0%   { top: 95%; left: 95vw; transform: rotate(0deg); }
-      25%  { top: 70%; left: 70vw; transform: rotate(-20deg); }
-      50%  { top: 50%; left: 50vw; transform: rotate(25deg); }
-      75%  { top: 65%; left: 20vw; transform: rotate(-15deg); }
-      100% { top: 95%; left: 95vw; transform: rotate(0deg); }
-    }
-
-    .petalo {
-      top: -50px;
-      font-size: 1.5em;
-      animation: caerPetalo 16s infinite ease-in;
+      0%   { top: 95%; left: 95%; transform: rotate(0deg); }
+      25%  { top: 70%; left: 70%; transform: rotate(-20deg); }
+      50%  { top: 50%; left: 50%; transform: rotate(25deg); }
+      75%  { top: 65%; left: 20%; transform: rotate(-15deg); }
+      100% { top: 95%; left: 95%; transform: rotate(0deg); }
     }
 
     @keyframes caerPetalo {
@@ -142,24 +137,30 @@
       50%  { transform: translateY(60%) rotate(180deg); opacity: 0.7; }
       100% { transform: translateY(95%) rotate(360deg); opacity: 0; }
     }
+
+    .petalo {
+      top: -50px;
+      font-size: 1.5em;
+      animation: caerPetalo 16s infinite ease-in;
+    }
   </style>
 </head>
 <body>
-
-  <!-- 🐝 Abejas decorativas -->
-  <span class="abeja abeja-1">🐝</span>
-  <span class="abeja abeja-2">🐝</span>
-
-  <!-- 🌸 Pétalos románticos -->
-  <span class="petalo" style="left: 50vw;">🌸</span>
-  <span class="petalo" style="left: 20vw; animation-delay: 2s;">🌸</span>
-  <span class="petalo" style="left: 70vw; animation-delay: 4s;">🌸</span>
 
   <header>
     <div>¡Feliz cumpleaños #22, Margarita! 🎂🎉🥳🎊</div>
   </header>
 
   <main>
+    <!-- 🐝 Abejas decorativas -->
+    <span class="abeja abeja-1">🐝</span>
+    <span class="abeja abeja-2">🐝</span>
+
+    <!-- 🌸 Pétalos románticos -->
+    <span class="petalo" style="left: 50%;">🌸</span>
+    <span class="petalo" style="left: 20%; animation-delay: 2s;">🌸</span>
+    <span class="petalo" style="left: 70%; animation-delay: 4s;">🌸</span>
+
     <h1>Estas son las mañanitas que cantaba el Rey David a las muchachas bonitas se las cantamos así 🎶🥁🎊</h1>
     <div class="subtitulo">¡Feliz Cumpleaños Margarita! 🎂</div>
     <p>
