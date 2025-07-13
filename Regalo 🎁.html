@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Regalo 🎁</title>
+  <link rel="icon" href="icono.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fff0f5, #fce4ec);
+      background-image: url('fondo-rosas.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+      animation: fadeIn 2s ease-out;
+      position: relative;
+      z-index: 10;
+    }
+
+    h1 {
+      font-size: 2.3em;
+      color: #e91e63;
+      margin-bottom: 25px;
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 12px 25px;
+      background-color: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      animation: bounce 2s infinite;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+
+    .floating {
+      position: absolute;
+      font-size: 2em;
+      animation: floatEmoji 7s infinite ease-in-out;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    @keyframes floatEmoji {
+      0% { transform: translateY(-60px); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(110vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Emojis flotantes -->
+  <span class="floating" style="left: 10%; animation-delay: 0s;">🎉</span>
+  <span class="floating" style="left: 25%; animation-delay: 1s;">💖</span>
+  <span class="floating" style="left: 45%; animation-delay: 2s;">🎊</span>
+  <span class="floating" style="left: 65%; animation-delay: 3s;">🥳</span>
+  <span class="floating" style="left: 85%; animation-delay: 4s;">🎂</span>
+
+  <div class="container">
+    <h1>💌 Para Margarita, con mucho amor 💗</h1>
+    <button onclick="window.location.href='Para Margarita con mucho amor ❤️.html'">Abrir regalo 🎁</button>
+  </div>
+</body>
+</html>
