@@ -9,10 +9,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-image: url('https://raw.githubusercontent.com/TheBestPrices/Regalo-Margarita/main/img/fondo-margaritas.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-color: #fff8fc;
       min-height: 100vh;
     }
 
@@ -38,12 +35,17 @@
     main {
       max-width: 800px;
       margin: 30px auto;
-      background-color: rgba(255, 246, 252, 0.93);
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
       position: relative;
       z-index: 10;
+      background-image: url('https://raw.githubusercontent.com/TheBestPrices/Regalo-Margarita/main/img/fondo-margaritas.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: rgba(255, 255, 255, 0.85);
+      background-blend-mode: lighten;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
 
     h1 {
@@ -88,7 +90,6 @@
       50% { transform: scale(1.3); }
     }
 
-    /* 🐝 Abejas con movimiento libre */
     .abeja {
       position: fixed;
       font-size: 2em;
@@ -124,7 +125,7 @@
 </head>
 <body>
 
-  <!-- 🐝 Abejas con vuelo libre -->
+  <!-- Abejas decorativas -->
   <span class="abeja abeja-1">🐝</span>
   <span class="abeja abeja-2">🐝</span>
 
